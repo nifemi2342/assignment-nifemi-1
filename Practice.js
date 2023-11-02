@@ -489,7 +489,7 @@ console.log(colorLookup("Yellow"));
 			},
 		
 	
-		//-> Add the other CD objects here
+		
 	
 		284: {
 			cdTitle: "I Told Them",
@@ -524,29 +524,22 @@ console.log(colorLookup("Yellow"));
 	
 	*/
 	function updateCollection(collection, id, prop, value) {
-		// Add your code here
-
-		/*const CDs = {
-			CD1: "Unruly",
-			CD2: "Ravage",
-			CD3: "Work of art",
-			CD4: "I Told Them"
-		},
-		id = {
-
-		},
-		prop = {
-
-		},
-		value = {
-
-		}*/
-
-		
-	
+		if (value === "") {
+			delete collection[id][prop];
+		} else {
+			if (prop !== "tracks") {
+				collection[id][prop] = value;
+			} else {
+				if (!collection[id].hasOwnProperty("tracks")) {
+					collection[id].tracks = [];
+				}
+				collection[id].tracks.push(value);
+			}
+		}
 		
 		return collection;
 	}
+
 	
 	/* 
 		 Tests 
