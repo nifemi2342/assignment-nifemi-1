@@ -494,7 +494,8 @@ console.log(colorLookup("Yellow"));
 		284: {
 			cdTitle: "I Told Them",
 			artist: "Burnaboy",
-			tracks: ["City boys"],
+			tracks: ["City boys"]
+			,
 		},
 	};
 	/*
@@ -556,3 +557,29 @@ console.log(colorLookup("Yellow"));
 	console.log(updateCollection(cdCollection, 254, "cdTitle", "Ravage")); //-> cdTitle should be the string Ravage
 	
 	/* JavaScript Loops */
+
+	// ExerciseA - Use a for loop to push even numbers between 0 and 10 into an array called evenNumbers.
+
+const evenNumbers = [];
+for (let i = 0; i <= 8; i++) {
+	if (i % 2 === 0) {
+	  evenNumbers.push(i);
+	}
+  }
+
+// Add your code here
+
+console.log(evenNumbers); //-> [0, 2, 4, 8]
+
+// ExerciseB - Use a for loop to push even numbers between 1 and 9 into an array called oddNumbers.
+
+const oddNumbers = [];
+for (let i = 1; i <= 9; i++) {
+	if (i % 2-1 === 0) {
+	  oddNumbers.push(i);
+	}
+  }
+
+// Add your code here
+
+console.log(oddNumbers); //-> [1, 3, 5, 7, 9]
